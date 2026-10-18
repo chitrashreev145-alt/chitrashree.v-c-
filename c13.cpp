@@ -10,8 +10,6 @@ class box{
 };
 int main (){
     box a;box b(3);box c(2,3,4);
-    cout<< a.volume()<<" "
-        << b.volume <<" "
-        << c.volume()<<endl;
+    cout<< a.volume()<<" "<< b.volume <<" "<< c.volume()<<endl;
     return 0;
 }
