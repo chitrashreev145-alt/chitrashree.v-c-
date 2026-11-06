@@ -2,14 +2,14 @@
 #include<cstring>
 using namespace std;
 class Mystring{
-    char*data;
+    char *data;
     public:
     Mystring(const char*s){
-        data=new char[strlen(s)+1];
+        data = new char[strlen(s)+1];
         strcpy(data,s);
     }
     Mystring(const Mystring &o){
-        data=new char [strlen(o.data+1)];
+        data = new char[strlen(o.data+1)];
         strcpy(data,o.data);
     }
     ~Mystring(){delete[]data;}
@@ -21,5 +21,4 @@ int main(){
     a.print();
     b.print();
     return 0;
-    
 }
