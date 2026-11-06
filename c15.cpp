@@ -1,16 +1,18 @@
 #include<iostream>
 using namespace std;
-class distance {
-    int feet, inch;
+class car{
+    int speed = 0;
+    friend class dashboard;
     public:
-    distance add (const distance&a,const distance&b){
-        int total inch =(a.feet+b.feet)*12+a.inch+b.inch;
-        return distance(total inch/12,total inch %12);
-    }
+    void accelerate(){speed +=10;}
+
+};
+class dashboard{
+    public:
+    void display(const car &c){cout<<"speed="<<c.speed<<"km/h\n";}
 };
 int main(){
-    distance d1(5,8),d2(3,7);
-    distance d3 = add(d1,d2);
-    d3.show();
+    car c; c.accelerate(); c.accelerate();
+    dashboard().display(c);
     return 0;
 }
